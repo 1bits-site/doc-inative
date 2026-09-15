@@ -1,0 +1,53 @@
+name: "🔄 IBM i Difference"
+description: "The most important issue type — feed the compatibility base"
+title: "[IBM i Difference]: "
+labels: ["ibmi-difference"]
+body:
+  - type: input
+    id: ibmi-version
+    attributes:
+      label: "IBM i version"
+      placeholder: "V7R5"
+    validations:
+      required: true
+  - type: input
+    id: feature
+    attributes:
+      label: "Feature"
+      placeholder: "RPG CALL, PSDS, SFL paging…"
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: "Source"
+      description: "Minimal program that shows the difference"
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected IBM i behavior"
+      placeholder: "On IBM i this prints… / sets %FOUND = *ON…"
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: "Actual iNative behavior"
+      placeholder: "iNative prints… / sets %FOUND = *OFF…"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Evidence"
+      description: "Screenshots, listings, job logs"
+  - type: input
+    id: env
+    attributes:
+      label: "Environment"
+      placeholder: "iNative 0.1.0, Linux amd64"
+    validations:
+      required: true

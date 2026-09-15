@@ -1,0 +1,41 @@
+name: "🐛 Bug"
+description: "iNative does something incorrectly"
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: repro
+    attributes:
+      label: "Minimal reproduction"
+      description: "Source + commands, small enough to run in minutes"
+      placeholder: |
+        **free
+        dsply 'hi';
+        *inlr = *on;
+        ---
+        CRTBNDRPG PGM(MYAPP/HELLO) ...
+        CALL MYAPP/HELLO
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: "Expected vs actual"
+      placeholder: |
+        Expected: ...
+        Actual: ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs"
+      description: "Job log (DSPJOBLOG) or terminal output"
+      render: text
+  - type: input
+    id: version
+    attributes:
+      label: "iNative version"
+      placeholder: "0.1.0"
+    validations:
+      required: true

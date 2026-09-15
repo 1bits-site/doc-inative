@@ -1,0 +1,22 @@
+name: "🚀 Feature Request"
+description: "Something that does not exist yet (proposing is not promising)"
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "Proposal"
+      placeholder: "Implement SETGT…"
+    validations:
+      required: true
+  - type: textarea
+    id: ibmi
+    attributes:
+      label: "IBM i reference"
+      description: "How IBM i behaves / where it is documented"
+  - type: textarea
+    id: use-case
+    attributes:
+      label: "Use case"
+      description: "What real program needs this?"

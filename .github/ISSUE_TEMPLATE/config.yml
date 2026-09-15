@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "💬 Discussions — questions and conversation"
+    url: https://github.com/1bits-site/doc-inative/discussions
+    about: "Questions, experiences, IBM i cases under study, ideas. Discussions are not actionable work; they become Issues when concrete work appears."
+  - name: "📚 Documentation site"
+    url: https://github.com/1bits-site/doc-inative
+    about: "Start here if you are not sure what to report."

@@ -1,0 +1,36 @@
+name: "🧪 Compatibility Case"
+description: "A real IBM i program — should iNative behave this way?"
+title: "[CASE]: "
+labels: ["compatibility-case"]
+body:
+  - type: input
+    id: ibmi-version
+    attributes:
+      label: "IBM i version"
+      placeholder: "V7R5"
+    validations:
+      required: true
+  - type: textarea
+    id: program
+    attributes:
+      label: "Program"
+      description: "Real-world source (trimmed to the behavior in question)"
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: ibmi-result
+    attributes:
+      label: "IBM i result"
+    validations:
+      required: true
+  - type: textarea
+    id: inative-result
+    attributes:
+      label: "iNative result"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected"
