@@ -1,0 +1,22 @@
+---
+title: Licencias de terceros
+description: Software open-source distribuido con iNative y sus licencias.
+---
+
+Documentar una dependencia no publica nuestro código ni cambia su licencia.
+Cada paquete conserva sus términos; la tabla indica qué viaja con el binario
+iNative. Inventario completo con copyright holders:
+`legal/THIRD-PARTY-NOTICES.md` (repo privado).
+
+| Tecnología | Uso | Licencia |
+|---|---|---|
+| Toolchain Go 1.25 | Runtime / compilador | BSD-3-Clause |
+| modernc.org/sqlite (+ núcleo SQLite, dominio público) | Base de datos local | BSD-3-Clause |
+| gorilla/websocket, pkg/sftp | Transporte SSH/Mapepire | BSD-2-Clause |
+| fsnotify, x/crypto, x/sys, uuid, kr/fs, bigfft, libc/mathutil/memory de modernc | Soporte del runtime | BSD-3-Clause |
+| go-humanize, go-isatty, go-strftime | Soporte del runtime | MIT |
+
+Sin software GPL, LGPL, AGPL ni MPL en iNative. GCC (GPL-3.0 con excepción)
+es requisito del sistema, no se redistribuye. El sitio se genera con
+Astro/Starlight (MIT); su tooling de imágenes (sharp, Apache-2.0) solo corre
+en build.

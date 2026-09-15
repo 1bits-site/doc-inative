@@ -49,6 +49,10 @@ export default defineConfig({
 					autogenerate: { directory: 'community' },
 				},
 				{
+					label: 'About',
+					autogenerate: { directory: 'about' },
+				},
+				{
 					label: 'Releases',
 					autogenerate: { directory: 'releases' },
 				},

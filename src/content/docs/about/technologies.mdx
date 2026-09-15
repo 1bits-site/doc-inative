@@ -1,0 +1,27 @@
+---
+title: Technologies
+description: What iNative is built with — runtime, compiler, database, docs.
+---
+
+## Built with
+
+**Go** — core runtime and compiler infrastructure (BSD-3-Clause toolchain;
+no copyleft in the dependency tree).
+
+**SQLite** — local database engine. iNative links it through a pure-Go
+driver; the SQLite core itself is public domain.
+
+**GCC** — native compilation backend. GCC is a system requirement installed
+on your machine; iNative does not redistribute it. It compiles the C the
+transpiler generates — it never validates your RPG (iNative diagnostics do).
+
+**Astro + Starlight** — this documentation website (both MIT).
+
+## What is deliberately absent
+
+- **GDB**: iNative's debugger is native; GDB is not used or required.
+- **SQL as a "library"**: SQL/SQLRPGLE is language support (embedded SQL
+  preprocessed into the RPG pipeline), not a third-party package.
+
+> iNative is an independent project and is not affiliated with IBM.
+> IBM i, RPG, ILE and 5250 are trademarks of International Business Machines.
