@@ -1,0 +1,14 @@
+---
+title: ILE
+description: Modules, service programs, binder and activation groups.
+---
+
+- Modules (`CRTRPGMOD`, `CRTCPPMOD`, …) with procedures, exports and calling
+  convention as catalog metadata.
+- Binder: imports resolve against exports before any native build
+  (`ILE0012` unresolved export, `ILE0013` invalid binding).
+- Service programs (`CRTSRVPGM`) bundle modules under a signature.
+- Activation groups (`*NEW`, `*CALLER`, named) are declared by the compiler
+  and materialized by the runtime.
+
+Background: [ILE concepts](/concepts/ile/) and [execution model](/concepts/execution-model/).

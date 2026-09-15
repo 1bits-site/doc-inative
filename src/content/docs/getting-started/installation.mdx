@@ -1,0 +1,20 @@
+---
+title: Installation
+description: Install iNative 0.1.0 (Linux amd64 validated).
+---
+
+:::note
+iNative 0.1.0 is Early Access. Start with the environment you can actually
+validate — Linux amd64 today.
+:::
+
+1. Get the `0.1.0` release bundle.
+2. Unpack it and start the server:
+   ```sh
+   ./run.sh
+   ```
+   This builds the binary, compiles the QSYS system objects, and serves
+   TN5250 (5250), SSH (2222) and the SQL endpoint.
+3. Connect a 5250 emulator to `127.0.0.1:5250` and sign on as `DEVUSER`.
+
+Next: [your first RPGLE program](/getting-started/first-program/).

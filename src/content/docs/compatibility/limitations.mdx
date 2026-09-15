@@ -1,0 +1,27 @@
+---
+title: Known limitations
+description: Brutally honest list of what iNative cannot do yet. Updated every release.
+---
+
+## COBOL
+
+Only initial infrastructure exists. Full COBOL support is not implemented.
+
+## QUSRJOBI
+
+Only the subset required by current runtime scenarios exists
+(`JOBI0100`: job, user, number, program, library list).
+
+## CL
+
+Interpreter in development: `RTVJOBA`, `MONMSG`, core verbs. No full CL yet.
+
+## C/C++
+
+Native modules participate in binding via metadata; transpilation coverage
+is experimental.
+
+## IBM i compatibility
+
+Not yet fully validated against IBM i. The [support matrix](/compatibility/matrix/)
+is the contract; anything outside it should be assumed missing.

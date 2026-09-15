@@ -1,0 +1,44 @@
+---
+title: iNative
+description: Local IBM i / ILE development environment — build, run and debug IBM i workloads locally.
+template: splash
+hero:
+  tagline: Local IBM i / ILE development environment. Build, run and debug IBM i workloads locally.
+  image:
+    file: ../../assets/logo.jpeg
+    alt: iNative logo
+  actions:
+    - text: See what works
+      link: /compatibility/matrix/
+      icon: right-arrow
+    - text: Getting Started
+      link: /getting-started/installation/
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+:::caution[Early development]
+iNative is not IBM i and does not currently provide full compatibility.
+:::
+
+## Currently supported
+
+<CardGrid stagger>
+	<Card title="RPGLE" icon="approve-check">Compile, run, CALL, PSDS, File I/O, debugging</Card>
+	<Card title="5250 + SFL" icon="laptop">Interactive screens over TN5250</Card>
+	<Card title="SQLRPGLE" icon="database">Embedded SQL alongside RPG</Card>
+	<Card title="ILE" icon="puzzle">Modules, service programs, binder, activation groups</Card>
+</CardGrid>
+
+## Work in progress
+
+- CL — experimental
+- C/C++ — experimental
+- COBOL — planned
+- Broader IBM i conformance — not yet
+
+## Help us make iNative better
+
+Found a difference with IBM i? [Report it](/community/reporting-issues/) —
+behavior reports (`IBM i does X, iNative does Y`) are the most valuable contribution.

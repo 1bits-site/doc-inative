@@ -1,0 +1,36 @@
+---
+title: IBM i differences
+description: Where iNative deliberately or temporarily differs from IBM i.
+---
+
+Each difference follows this shape:
+
+```text
+IBM i
+Expected: ...
+
+iNative
+Actual: ...
+
+Status: Open / Reproduced / Implemented / Validated / Released
+```
+
+## RPG
+
+### Different behavior
+
+- ** zoned numerics** surface as plain integers in some paths (display shows
+  digits; packed arithmetic stays exact). Status: Open.
+
+### Not implemented
+
+- Printer files, commitment control, full BIF catalog. Status: Open.
+
+## 5250
+
+### Different behavior
+
+- Colors are best-effort (the 5250 palette has 4 base colors); positions and
+  fields are exact. Status: Accepted.
+
+Reported a new one? Open a [compatibility case](/community/ibmi-cases/).

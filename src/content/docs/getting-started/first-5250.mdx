@@ -1,0 +1,28 @@
+---
+title: Your first 5250 program
+description: RPGLE + display file + EXFMT on a real 5250 session.
+---
+
+1. Create the display file `HELLO.dspf` (format `FMT01` with an input field
+   `NOMBRE` and an output field `SALUDO`) and compile it:
+   ```text
+   CRTDSPF FILE(MYAPP/HELLO) SRCFILE(MYAPP/QDDSSRC) SRCMBR(HELLO)
+   ```
+2. Create the program — `dcl-f` binds the screen, `EXFMT` shows it:
+   ```rpgle
+   **free
+   dcl-f hello workstn;
+   dou (*in03 or *in12);
+     exfmt fmt01;
+     if (%trim(nombre) = '');
+       saludo = 'Hola Mundo! Ingresa tu nombre.';
+     else;
+       saludo = 'Hola, ' + %trim(nombre) + '!';
+     endif;
+   enddo;
+   *inlr = *on;
+   ```
+3. Compile with `CRTBNDRPG` and `CALL` it from an interactive 5250 session.
+   Type a name, press ENTER to be greeted; `F3`/`F12` exits.
+
+Next: [debug your first program](/getting-started/debugging/).

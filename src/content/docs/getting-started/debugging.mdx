@@ -1,0 +1,24 @@
+---
+title: Debug your first program
+description: Breakpoint, run, step, inspect, continue.
+---
+
+1. Start the program under the debugger:
+   ```text
+   STRDBG PGM(MYAPP/HELLO)
+   ```
+2. Set a breakpoint:
+   ```text
+   BREAK 12
+   ```
+3. Run — execution stops at line 12 showing program, module, procedure
+   and source line (the same context PSDS sees).
+4. Inspect variables, step, then continue:
+   ```text
+   STEP
+   CONTINUE
+   ```
+5. End the session:
+   ```text
+   ENDDBG
+   ```

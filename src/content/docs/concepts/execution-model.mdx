@@ -1,0 +1,24 @@
+---
+title: Execution model
+description: How iNative runs programs — jobs, call stack, activation groups.
+---
+
+Every execution happens inside a **job** with its own library list, temporary
+storage, and job log. Programs run as native artifacts loaded into the job:
+
+```text
+Job
+ └── CALL HELLO
+       ├── Program = HELLO, Module = HELLO, Procedure = MAIN
+       └── CALL CHILD → new frame, same job → return restores caller
+```
+
+Key ideas:
+
+- **Call stack**: each call pushes program, module, procedure, parameters and
+  activation group; returning restores the caller.
+- **Activation groups** (`*NEW`, `*CALLER`, named) scope program state.
+- **Program Status (PSDS)**: RPG programs read program, status, routine,
+  parameters and job fields from the live execution context — never statics.
+- **Conditions**: errors (e.g. division by zero → status `00102`) flow to
+  `*STATUS`, the job log, and the debugger from one place.

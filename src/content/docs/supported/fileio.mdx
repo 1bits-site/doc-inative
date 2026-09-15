@@ -1,0 +1,9 @@
+---
+title: File I/O
+description: Native file operations inside the job.
+---
+
+`CHAIN`, `READ`, `READE`, `READP`, `READPE`, `SETLL`, `SETGT`, `WRITE`,
+`UPDATE` and `DELETE` execute inside the job context against the resolved
+physical artifact (per-job tables for `QTEMP`). Definition comes from the
+artifact, never from a SQLite copy.

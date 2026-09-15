@@ -1,0 +1,42 @@
+---
+title: Support matrix
+description: The heart of the project — what works, at what level.
+---
+
+| Area                   | Status | Level        |
+| ---------------------- | ------ | ------------ |
+| RPGLE                  | 🟢     | Usable       |
+| RPG CALL               | 🟢     | Usable       |
+| PSDS                   | 🟢     | Usable       |
+| 5250                   | 🟢     | Usable       |
+| SFL                    | 🟢     | Usable       |
+| File I/O               | 🟢     | Usable       |
+| SQLRPGLE               | 🟢     | Usable       |
+| Debugger               | 🟢     | Usable       |
+| ILE Modules            | 🟢     | MVP          |
+| Service Programs       | 🟢     | MVP          |
+| Binder                 | 🟢     | MVP          |
+| Activation Groups      | 🟢     | MVP          |
+| CL                     | 🟡     | Experimental |
+| C/C++                  | 🟡     | Experimental |
+| COBOL                  | 🔴     | Planned      |
+| QUSRJOBI               | 🔴     | Partial      |
+| Full IBM i conformance | 🔴     | Not yet      |
+
+## What does "usable" mean?
+
+Never "100% supported". Each area page spells out the covered surface:
+
+```text
+RPGLE
+├── compile
+├── semantic validation
+├── runtime
+├── CALL
+├── RETURN
+├── PSDS
+├── FileIO
+└── debugging
+```
+
+See [supported overview](/supported/overview/) for every area.
