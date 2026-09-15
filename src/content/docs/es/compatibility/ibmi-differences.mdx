@@ -1,0 +1,37 @@
+---
+title: Diferencias con IBM i
+description: Dónde iNative difiere de IBM i, deliberada o temporalmente.
+---
+
+Cada diferencia sigue esta forma:
+
+```text
+IBM i
+Esperado: ...
+
+iNative
+Actual: ...
+
+Estado: Abierto / Reproducido / Implementado / Validado / Liberado
+```
+
+## RPG
+
+### Comportamiento distinto
+
+- **Numéricos zoned** afloran como enteros planos en algunos caminos (el
+  display muestra dígitos; la aritmética packed sigue exacta). Estado: Abierto.
+
+### No implementado
+
+- Archivos de impresora, control de compromiso, catálogo BIF completo.
+  Estado: Abierto.
+
+## 5250
+
+### Comportamiento distinto
+
+- Los colores son best-effort (la paleta 5250 tiene 4 colores base);
+  posiciones y campos son exactos. Estado: Aceptado.
+
+¿Reportas una nueva? Abre un [caso de compatibilidad](/es/community/ibmi-cases/).

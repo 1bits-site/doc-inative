@@ -8,6 +8,11 @@ export default defineConfig({
 		starlight({
 			title: 'iNative',
 			description: 'Local IBM i / ILE development environment',
+			defaultLocale: 'root',
+			locales: {
+				root: { label: 'English', lang: 'en' },
+				es: { label: 'Español', lang: 'es' },
+			},
 			editLink: {
 				baseUrl: 'https://github.com/1bits-site/doc-inative/edit/main/',
 			},

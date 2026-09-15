@@ -1,0 +1,24 @@
+---
+title: Depura tu primer programa
+description: Breakpoint, ejecución, paso, inspección, continuar.
+---
+
+1. Arranca el programa bajo el depurador:
+   ```text
+   STRDBG PGM(MYAPP/HELLO)
+   ```
+2. Pon un breakpoint:
+   ```text
+   BREAK 12
+   ```
+3. Ejecuta — se detiene en la línea 12 mostrando programa, módulo,
+   procedimiento y línea fuente (el mismo contexto que ve la PSDS).
+4. Inspecciona variables, avanza paso a paso y continúa:
+   ```text
+   STEP
+   CONTINUE
+   ```
+5. Termina la sesión:
+   ```text
+   ENDDBG
+   ```

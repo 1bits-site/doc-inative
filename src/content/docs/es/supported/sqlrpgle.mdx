@@ -1,0 +1,13 @@
+---
+title: SQLRPGLE
+description: SQL embebido preprocesado al pipeline RPGLE.
+---
+
+`EXEC SQL` se preprocesa a RPGLE primero — no hay un segundo runtime RPG:
+
+```text
+SQLRPGLE → preproceso SQL → RPGLE → pipeline RPG
+```
+
+Cubierto: `SELECT ... INTO` unitario (p. ej. `sysibm.sysdummy1` para
+`current_user`, `current_date`), `SQLCA` por job, `COMMIT(*NONE)`.

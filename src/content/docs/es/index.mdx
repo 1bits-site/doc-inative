@@ -1,0 +1,44 @@
+---
+title: iNative
+description: Entorno local de desarrollo IBM i / ILE — compila, ejecuta y depura cargas IBM i en local.
+template: splash
+hero:
+  tagline: Entorno local de desarrollo IBM i / ILE. Compila, ejecuta y depura cargas IBM i en local.
+  image:
+    file: ../../../assets/logo.jpeg
+    alt: Logotipo de iNative
+  actions:
+    - text: Ver qué funciona
+      link: /es/compatibility/matrix/
+      icon: right-arrow
+    - text: Primeros pasos
+      link: /es/getting-started/installation/
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+:::caution[Desarrollo temprano]
+iNative no es IBM i y actualmente no ofrece compatibilidad total.
+:::
+
+## Actualmente soportado
+
+<CardGrid stagger>
+	<Card title="RPGLE" icon="approve-check">Compilación, ejecución, CALL, PSDS, File I/O, depuración</Card>
+	<Card title="5250 + SFL" icon="laptop">Pantallas interactivas por TN5250</Card>
+	<Card title="SQLRPGLE" icon="database">SQL embebido junto a RPG</Card>
+	<Card title="ILE" icon="puzzle">Módulos, programas de servicio, binder, grupos de activación</Card>
+</CardGrid>
+
+## En progreso
+
+- CL — experimental
+- C/C++ — experimental
+- COBOL — planificado
+- Conformidad IBM i más amplia — aún no
+
+## Ayúdanos a mejorar iNative
+
+¿Encontraste una diferencia con IBM i? [Repórtala](/es/community/reporting-issues/) —
+los reportes de comportamiento (`IBM i hace X, iNative hace Y`) son la contribución más valiosa.

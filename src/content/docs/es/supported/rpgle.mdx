@@ -1,0 +1,18 @@
+---
+title: RPGLE
+description: Qué significa la cobertura RPGLE en iNative.
+---
+
+```text
+RPGLE
+├── compilación (severity 00 exigido)
+├── validación semántica (diagnósticos iNative, nunca spew de GCC)
+├── runtime (nativo .so por programa)
+├── CALL / RETURN (anidados, pila restaurada)
+├── PSDS (*PROC, *STATUS, *ROUTINE, *PARMS, campos de job)
+├── File I/O (CHAIN, READ*, WRITE, UPDATE, DELETE, SETLL/GT)
+└── depuración (breakpoints, paso, inspección)
+```
+
+No cubierto: sintaxis free completa, todos los BIFs, archivos de impresora,
+control de compromiso.

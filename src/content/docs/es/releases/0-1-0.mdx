@@ -1,0 +1,28 @@
+---
+title: iNative 0.1.0
+description: Primera release Early Access — estado, runtime, soporte, limitaciones.
+---
+
+## iNative 0.1.0
+
+**Estado:** Early Access · **Runtime:** ABI v5
+
+### Soportado
+
+RPGLE (compilación, CALL, RETURN, PSDS, File I/O, depuración), 5250 + SFL,
+SQLRPGLE, módulos ILE, programas de servicio, binder, grupos de activación.
+
+### Limitaciones conocidas
+
+CL/C++ experimental, COBOL planificado, QUSRJOBI parcial, sin conformidad IBM i
+total. Detalles: [limitaciones](/es/compatibility/limitations/).
+
+### No soportado
+
+Cargas de producción, archivos de impresora, control de compromiso, coberturas
+completas de lenguajes.
+
+### Validación
+
+- 38/38 paquetes de tests de contrato internos en verde
+- 23/23 casos de validación estricta de specs en verde

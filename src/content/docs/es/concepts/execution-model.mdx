@@ -1,0 +1,27 @@
+---
+title: Modelo de ejecución
+description: Cómo iNative ejecuta programas — jobs, pila de llamadas, grupos de activación.
+---
+
+Toda ejecución ocurre dentro de un **job** con su propia lista de bibliotecas,
+almacenamiento temporal y joblog. Los programas corren como artefactos nativos
+cargados en el job:
+
+```text
+Job
+ └── CALL HELLO
+       ├── Program = HELLO, Module = HELLO, Procedure = MAIN
+       └── CALL CHILD → nuevo frame, mismo job → al retornar restaura el llamador
+```
+
+Ideas clave:
+
+- **Pila de llamadas**: cada llamada apila programa, módulo, procedimiento,
+  parámetros y grupo de activación; al retornar se restaura el llamador.
+- **Grupos de activación** (`*NEW`, `*CALLER`, con nombre) delimitan el estado
+  del programa.
+- **Estado de programa (PSDS)**: los programas RPG leen programa, estado,
+  rutina, parámetros y campos del job desde el contexto vivo de ejecución —
+  nunca desde valores estáticos.
+- **Condiciones**: los errores (p. ej. división por cero → estado `00102`)
+  fluyen a `*STATUS`, al joblog y al depurador desde un solo lugar.

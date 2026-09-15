@@ -1,0 +1,24 @@
+---
+title: ILE
+description: Módulos, programas de servicio, binder y grupos de activación en iNative.
+---
+
+iNative trata ILE como objetos de primera clase, no como casos especiales del
+compilador:
+
+```text
+RPGLE ─┐
+CLLE ──┤──→ módulos ─→ binder ─→ programa ─→ job
+COBOL ─┤         ╲──→ programa de servicio ──╱
+C ─────┘
+```
+
+- **Módulos** (`CRTRPGMOD`, `CRTCPPMOD`, …) con procedimientos, exports y
+  convención de llamada como metadata del catálogo.
+- **Binder**: resuelve imports contra exports antes de compilar nativo
+  (`ILE0012` export no resuelto, `ILE0013` binding inválido).
+- **Programas de servicio** (`CRTSRVPGM`) agrupan módulos bajo una firma.
+- **Grupos de activación**: los declara el compilador (`*NEW`, `*CALLER`, con
+  nombre) y los materializa el runtime.
+
+Agregar un lenguaje significa: frontend → IR compartida → Runtime ABI existente.

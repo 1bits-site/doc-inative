@@ -1,0 +1,42 @@
+---
+title: Matriz de soporte
+description: El corazón del proyecto — qué funciona y a qué nivel.
+---
+
+| Área                | Estado | Nivel        |
+| ------------------- | ------ | ------------ |
+| RPGLE               | 🟢     | Utilizable   |
+| RPG CALL            | 🟢     | Utilizable   |
+| PSDS                | 🟢     | Utilizable   |
+| 5250                | 🟢     | Utilizable   |
+| SFL                 | 🟢     | Utilizable   |
+| File I/O            | 🟢     | Utilizable   |
+| SQLRPGLE            | 🟢     | Utilizable   |
+| Depurador           | 🟢     | Utilizable   |
+| Módulos ILE         | 🟢     | MVP          |
+| Programas servicio  | 🟢     | MVP          |
+| Binder              | 🟢     | MVP          |
+| Grupos de activación| 🟢     | MVP          |
+| CL                  | 🟡     | Experimental |
+| C/C++               | 🟡     | Experimental |
+| COBOL               | 🔴     | Planificado  |
+| QUSRJOBI            | 🔴     | Parcial      |
+| Conformidad IBM i   | 🔴     | Aún no       |
+
+## Qué significa "utilizable"
+
+Nunca "100% soportado". Cada área detalla su superficie cubierta:
+
+```text
+RPGLE
+├── compilación
+├── validación semántica
+├── runtime
+├── CALL
+├── RETURN
+├── PSDS
+├── FileIO
+└── depuración
+```
+
+Ver [resumen de soporte](/es/supported/overview/) por área.

@@ -1,0 +1,27 @@
+---
+title: Tu primer programa RPGLE
+description: Crea HELLO.RPGLE, compílalo, ejecútalo, mira la salida — en 15 minutos.
+---
+
+1. Crea el fuente `HELLO.RPGLE`:
+   ```rpgle
+   **free
+   dsply 'Hola Mundo desde iNative!';
+   *inlr = *on;
+   return;
+   ```
+2. Compílalo:
+   ```text
+   CRTBNDRPG PGM(MYAPP/HELLO) SRCFILE(MYAPP/QRPGLESRC) SRCMBR(HELLO)
+   ```
+   Espera `00 highest severity`.
+3. Ejecútalo:
+   ```text
+   CALL MYAPP/HELLO
+   ```
+4. Mira la salida en el joblog (`DSPJOBLOG`):
+   ```text
+   DSPLY: Hola Mundo desde iNative!
+   ```
+
+Siguiente: [tu primer programa 5250](/es/getting-started/first-5250/).
